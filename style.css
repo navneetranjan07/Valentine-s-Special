@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Love+Light&family=Merienda:wght@300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: linear-gradient(135deg, #ff6b6b, #ff8585);
+    overflow: hidden;
+    background-image: url(assests/bg.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-width: 600px;
+    color: white;
+    width: 90%;
+    /* height: 48vh; */
+    background: rgba(0, 0, 0, 0.274);
+    border-radius: 20px;
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+    font-size: 30px;
+    font-family: "Lavishly Yours", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+
+    border: 1px solid rgba(255, 255, 255, 0.47);
+}
+
+
+
+.message {
+    position: relative;
+    z-index: 2;
+}
+
+.day-title {
+    font-size: 2.5rem;
+    color: #e9f906;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(133, 223, 223, 0.699);
+    font-family: "Love Light", serif;
+    font-weight: 600;
+    font-style: normal;
+    
+}
+
+
+.navigation {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+
+}
+
+
+button {
+    width: 100px;
+    padding: 0.3rem;
+    font-size: 0.85rem;
+    border: none;
+    border-radius: 20px;
+    background: #eeff00ae;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-family: cursive;
+    transition: transform 0.2s ease, background 0.2s ease;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.prev-btn{
+}
+
+button:hover {
+    background: #ff4d4d;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.info{
+    width: 95%;
+    font-size: 20px;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Merienda", serif;
+}
+.info span{
+    color: #eeff00; 
+    text-decoration: none;
+    font-style: none;  
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: rotate(45deg) translate(0, 0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotate(45deg) translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        background: url(assests/bgmob.jpg);
+        background-size: cover;
+    }
+    .container{
+        backdrop-filter: blur(2.3px);
+    }
+    .day-title{
+        color: rgb(238, 255, 0);
+    }
+    .prev-btn , .next-btn{
+        background-color: rgba(35, 242, 235, 0.784);
+    }
+
+    .info{
+        font-size: 7px;
+        margin-bottom: 5px;
+    }
+    .info span{
+        color: rgb(238, 255, 0);
+    }
+}
